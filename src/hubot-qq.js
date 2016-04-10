@@ -60,7 +60,7 @@
         groupname: process.env.HUBOT_QQ_GROUP || 'qqbot群',
         port: process.env.HUBOT_QQ_IMGPORT || 3000,
         host: process.env.HUBOT_QQ_IMGHOST || 'localhost',
-        plugins: ['help']
+        plugins: []
       };
       skip_login = process.env.HUBOT_QQ_SKIP_LOGIN === 'true';
       if (!((options.account != null) && (options.password != null) && (options.groupname != null))) {
