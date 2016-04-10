@@ -7,7 +7,7 @@
 
   ref = require('hubot'), Robot = ref.Robot, Adapter = ref.Adapter, EnterMessage = ref.EnterMessage, LeaveMessage = ref.LeaveMessage, TextMessage = ref.TextMessage;
 
-  auth = require("../src/qqauth");
+  auth = require("../src/qqauth-qrcode");
 
   api = require("../src/qqapi");
 

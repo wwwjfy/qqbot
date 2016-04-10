@@ -1,12 +1,12 @@
 {
-  "name": "smartqq-bot",
+  "name": "hubot-smartqq",
   "version": "2.1.0",
   "description": "SmartQQ robot powered by node.js",
-  "main": "main.js",
+  "main": "src/hubot-qq.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/floatinghotpot/qqbot.git"
+    "url": "https://github.com/wwwjfy/qqbot.git"
   },
   "keywords": [
     "qqbot",
@@ -45,10 +45,5 @@
   },
   "devDependencies": {},
   "analyze": false,
-  "preferGlobal": "true",
-  "bin": {
-    "qqbot": "main.js",
-    "smartqq-bot": "main.js",
-    "qq": "qq.js"
-  }
+  "preferGlobal": "true"
 }

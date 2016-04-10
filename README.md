@@ -69,6 +69,13 @@ nohup qqbot &
 ```
 此时 stdout 的输出重定向到文件 nohup.out，不在屏幕显示。
 
+For Hubot
+-------
+
+```
+hubot -a smartqq
+```
+
 参考资料
 ----
 * [CHANGELOG.md](CHANGELOG.md)
