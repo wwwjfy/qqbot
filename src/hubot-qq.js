@@ -27,9 +27,16 @@
       envelope = arguments[0], strings = 2 <= arguments.length ? slice.call(arguments, 1) : [];
       this.robot.logger.info("hubot is sending " + strings);
       results = [];
+      var logger = this.robot.logger;
+      var group = this.group;
       for (i = 0, len = strings.length; i < len; i++) {
         str = strings[i];
-        results.push(this.group.send(str));
+        results.push(this.group.send(str, function (ret, e) {
+          if (ret.errCode != 0) {
+              logger.info("resending...");
+              group.send(str);
+          }
+        }));
       }
       return results;
     };
