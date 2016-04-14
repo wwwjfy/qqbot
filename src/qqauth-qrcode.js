@@ -208,6 +208,7 @@ function getUserHome() {
     return check_qq_verify(function(ret) {
         var retcode = parseInt(ret[0]);
         if( retcode === 0 && ret[2].match(/^http/)) {
+            finish_verify_code();
             log.info("登录 step2 cookie 获取 ptwebqq");
             return get_ptwebqq(ret[2], function(ret){
                 var ptwebqq = client.get_cookies().filter(function(item) {
