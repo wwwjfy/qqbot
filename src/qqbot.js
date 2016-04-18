@@ -39,6 +39,14 @@
     }
 
     QQBot.prototype.save_group_member = function(group, info) {
+      info.minfo.forEach(function (m) {
+          var m_cards = info.cards.filter(function (card) {
+              return card.muin == m.uin;
+          });
+          if (m_cards.length > 0) {
+              m.nick = m_cards[0].card;
+          }
+      });
       return this.groupmember_info[group.gid] = info;
     };
 
