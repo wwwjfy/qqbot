@@ -94,7 +94,9 @@
                 name: message.from_user.nick,
                 room: options.groupname
               });
-              return _this.receive(new TextMessage(user, content, message.uid));
+              if (typeof content == 'string') {
+                  return _this.receive(new TextMessage(user, content, message.uid));
+              }
             });
           });
         };
