@@ -71,6 +71,9 @@
     QQBot.prototype.get_user_ingroup = function(uin, gid) {
       var info, users;
       info = this.groupmember_info[gid];
+      if (!info) {
+          return null;
+      }
       users = info.minfo.filter(function(item) {
         return item.uin === uin;
       });
